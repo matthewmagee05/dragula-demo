@@ -1,0 +1,17 @@
+<div class="column is-one-quarter">
+  <div class="control">
+    <input class="input" type="text" placeholder="Search here...">
+  </div>
+</div>
+<div class="columns is-multiline container">
+  <div class="column is-one-third" *ngFor="let user of users | paginate: {id:'user-page',itemsPerPage: 3, currentPage: p }"[dragula]='"bag-one"' [dragulaModel]='users'>
+    <app-user-card [user]="user"></app-user-card>
+  </div>
+</div>
+<div class="columns">
+  <div class="column is-one-quarter"></div>
+  <div class="column is-one-half">
+    <pagination-controls class="my-pagination" (pageChange)="p = $event" id="user-page"></pagination-controls>
+  </div>
+  <div class="column is-one-quarter"></div>
+</div>

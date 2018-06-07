@@ -1,0 +1,56 @@
+<aside class="column is-narrow is-narrow-mobile is-fullheight section is-hidden-mobile">
+  <div class="column">
+    <p class="menu-label is-hidden-touch">Filter Results</p>
+  </div>
+  <div class="column">
+    <mat-form-field>
+      <mat-select placeholder="Batch">
+        <mat-option *ngFor="let item of batch" [value]="item.value">
+          {{ item }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="column">
+    <mat-form-field>
+      <mat-select placeholder="Location">
+        <mat-option *ngFor="let loc of location" [value]="loc.value">
+          {{ loc }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="column">
+      <mat-form-field>
+        <mat-select placeholder="Buildings">
+          <mat-option *ngFor="let build of buildings" [value]="build.value">
+            {{ build }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="column">
+      <p class="menu-label is-hidden-touch">Gender</p>
+    </div>
+    <div class="column">
+        <mat-checkbox>Male</mat-checkbox>
+    </div>
+    <div class="column">
+        <mat-checkbox>Female</mat-checkbox>
+    </div>
+    <div class="column">
+        <mat-checkbox>Other</mat-checkbox>
+    </div>
+    <div class="column">
+        <p class="menu-label is-hidden-touch">Other</p>
+      </div>
+      <div class="column">
+          <mat-checkbox>Vacant Rooms Only</mat-checkbox>
+      </div>
+      <div class="column">
+          <mat-checkbox>Sort By Most Vacancies</mat-checkbox>
+      </div>
+      <div class="column">
+          <mat-checkbox>Unhoused Users Only</mat-checkbox>
+      </div>
+</aside>

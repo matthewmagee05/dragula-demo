@@ -1,0 +1,66 @@
+<!-- <div class="column is-one-quarter">
+  <div class="control">
+    <input class="input" type="text" placeholder="Search here...">
+  </div>
+</div>
+<div class="columns">
+  <div class="column is-one-third" *ngFor="let room of rooms | paginate: {id:'room-page', itemsPerPage: 3, currentPage: p }" >
+    <app-room-card [room]="room"></app-room-card>
+  </div>
+</div>
+<div class="columns">
+  <div class="column is-one-quarter"></div>
+  <div class="column is-one-half">
+    <pagination-controls (pageChange)="p = $event" id="room-page"></pagination-controls>
+  </div>
+  <div class="column is-one-quater"></div>
+</div> -->
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let location of test_locations">
+    <mat-expansion-panel-header>
+      {{location}}
+    </mat-expansion-panel-header>
+
+    <div class="columns">
+      <div class="column is-one-quarter is-narrow">
+        <div class="control">
+          <input class="input" type="text" placeholder="Search here...">
+        </div>
+      </div>
+      <div class="column"></div>
+    </div>
+    <div class="columns">
+      <div class="column is-one-third" *ngFor="let room of rooms | paginate: {id:'room-page', itemsPerPage: 3, currentPage: p }">
+        <app-room-card [room]="room"></app-room-card>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-one-half is-narrow">
+        <pagination-controls (pageChange)="p = $event" id="room-page"></pagination-controls>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<div class="columns">
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let location of test_locations">
+      <mat-expansion-panel-header>
+        {{location}}
+      </mat-expansion-panel-header>
+      <div class="columns">
+        <div class="column is-one-quarter">
+          <div class="control">
+            <input class="input" type="text" placeholder="Search here...">
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-third" *ngFor="let room of rooms | paginate: {id:'room-page', itemsPerPage: 3, currentPage: p }">
+          <app-room-card [room]="room"></app-room-card>
+        </div>
+      </div>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

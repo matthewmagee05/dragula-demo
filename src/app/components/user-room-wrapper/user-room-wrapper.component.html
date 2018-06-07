@@ -1,0 +1,43 @@
+<div class="columns is-multiline">
+  <div class="column is-one-third" *ngFor="let user of users | paginate: { itemsPerPage: 4, currentPage: p }">
+    <app-user-card [user]="user"></app-user-card>
+  </div>
+</div>
+<div id="seperator"></div>
+
+<div class="accordion" id="rooms-accordian">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5>
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">Collapsible Button 1</button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" data-parent="rooms-accordian">
+      <div class="card-body">
+        <div class="columns is-multiline">
+          <div class="column is-one-third" *ngFor="let room of rooms | paginate: { itemsPerPage: 4, currentPage: p }">
+            <app-room-card [room]="room"></app-room-card>
+          </div>
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="seperator2"></div>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Header1
+    </mat-expansion-panel-header>
+    Content1
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      Header2
+    </mat-expansion-panel-header>
+    Content2
+  </mat-expansion-panel>
+</mat-accordion>

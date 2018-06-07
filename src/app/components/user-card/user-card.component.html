@@ -1,0 +1,42 @@
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      {{user.name}}
+
+    </p>
+    <hr />
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="columns is-multiline">
+      <div class="column is-one-half">
+        <div class="content">
+          ID: {{user.id}} <br />
+          {{user.location}} <br />
+          <br />
+
+          {{user.building}} {{user.room}}
+          <br />
+
+        </div>
+      </div>
+
+      <div class="column is-one-half">
+        <div class="media">
+          <figure>
+            <img src="../../../assets/img/male.png">
+            <!-- <img src="../../../assets/img/female.png"> -->
+          </figure>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
